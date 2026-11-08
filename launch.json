@@ -1,0 +1,24 @@
+{
+  "kind": "custom_token",
+  "token": {
+    "contract": "WindowShopperToken",
+    "name": "IMDwindowshopper",
+    "symbol": "WWW",
+    "decimals": 18,
+    "constructorArgs": [],
+    "totalSupply": "1000000000000000000000000000"
+  },
+  "contracts": [],
+  "pool": {
+    "pairedCurrency": "0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7",
+    "fee": 12500,
+    "tickSpacing": 60,
+    "initialPrice": "79228162514264337593543950336"
+  },
+  "economics": {
+    "poolBps": 7000,
+    "initialMarketCapWei": "2500000000000000000000",
+    "remainderTo": "0xee2aaa315cf7ed169f93148d30d24af9318dbb66"
+  },
+  "notes": "WindowShopperToken is a fixed-supply ERC-20 (OpenZeppelin v5.1.0 ERC20, unchanged): name() returns IMDwindowshopper, symbol() returns WWW, decimals() returns 18. The constructor takes no arguments, makes no external calls, and mints the whole supply of 1,000,000,000 WWW (1e27 minor units) once to msg.sender, which is the factory under CREATE2; nothing can mint afterwards. There is no owner, admin, pauser, minter, blocklist, freeze, lock, seize or burnFrom path, so only a holder (or a spender within an allowance that holder granted) can move that holder's balance. Every transfer moves exactly amount: no fee, tax, burn or reflection, so the swarm's share arrives and is claimed whole, the single-sided seed through the Uniswap v4 PoolManager takes only the requester's pool share, and an ordinary trader can buy and sell. No delegatecall, callcode or selfdestruct, no upgradeability, no proxy. No application contracts accompany this launch. The pool pairs against IMD at 0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7 (18 decimals); pool.fee 12500 records the launch policy's 1.25% fee and pool.initialPrice is provenance only, since the deployer derives the opening price from economics.initialMarketCapWei, the total supply and the token's launch address."
+}
